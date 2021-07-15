@@ -28,6 +28,21 @@ const HeroSection = () => {
 
   return (
     <HeroContainer id="home">
+      <HeroContent>
+        <HeroH1>D&amp;K METSATÖÖD</HeroH1>
+        <HeroBtnWrapper>
+          <ButtonContact
+            to="contact"
+            smooth={true}
+            duration={600}
+            spy={true}
+            exact="true"
+            offset={-70}
+          >
+            VÕTA ÜHENDUST
+          </ButtonContact>
+        </HeroBtnWrapper>
+      </HeroContent>
       <ParralaxImgSun src={sun} />
       <ParralaxImgSun src={birds} />
       <ParralaxImg
@@ -54,21 +69,6 @@ const HeroSection = () => {
         src={valley5}
         style={{ transform: "translateY(${offsetY * 2}px })" }}
       />
-      <HeroContent>
-        <HeroH1>D&amp;K METSATÖÖD</HeroH1>
-        <HeroBtnWrapper>
-          <ButtonContact
-            to="contact"
-            smooth={true}
-            duration={600}
-            spy={true}
-            exact="true"
-            offset={-70}
-          >
-            VÕTA ÜHENDUST
-          </ButtonContact>
-        </HeroBtnWrapper>
-      </HeroContent>
     </HeroContainer>
   );
 };
