@@ -11,15 +11,16 @@ export const HeroContainer = styled.div`
   position: relative;
   margin-top: -80px;
   margin-bottom: 70vh;
+  z-index: 2;
 
   @media screen and (max-width: 770px) {
-    overflow: hidden;
-    margin-bottom: 70vh;
     height: 800px;
     margin-top: -30vh;
+    margin-bottom: 20vh;
   }
 
   @media screen and (max-width: 480px) {
+    margin-bottom: 15vh;
   }
 `;
 
@@ -40,6 +41,8 @@ export const HeroH1 = styled.h1`
   color: #fff;
   font-size: 4rem;
   text-align: center;
+  z-index: 2;
+  position: relative;
 
   @media screen and (max-width: 770px) {
     font-size: 40px;
@@ -74,8 +77,13 @@ export const ParralaxImg = styled.img`
   position: absolute;
   padding-top: 90vh;
 
+  @media screen and (min-width: 1000px) and (min-height: 1300px) {
+    padding-top: 60vh;
+  }
+
   @media screen and (max-width: 770px) {
-    width: 150vw;
+    width: 100vw;
+    height: auto;
   }
 
   @media screen and (max-width: 480px) {
@@ -85,9 +93,12 @@ export const ParralaxImg = styled.img`
 export const ParralaxImgSun = styled.img`
   width: 100%;
   position: absolute;
-  margin-top: 15vh;
+  margin-top: 50px;
 
   @media screen and (max-width: 770px) {
-    margin-top: -10vh;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin-top: -20vh;
   }
 `;
