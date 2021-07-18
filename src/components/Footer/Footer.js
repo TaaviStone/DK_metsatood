@@ -3,7 +3,7 @@ import {
   FooterContainer,
   FooterWrap,
   FooterContent,
-  FooterCreator,
+  Creator,
 } from "./FooterElements";
 
 const Footer = () => {
@@ -11,6 +11,7 @@ const Footer = () => {
     <FooterContainer>
       <FooterWrap>
         <FooterContent>&copy; D&amp;K Metsatööd 2021</FooterContent>
+        <Creator>Created by Taavi Raudkivi</Creator>
       </FooterWrap>
     </FooterContainer>
   );

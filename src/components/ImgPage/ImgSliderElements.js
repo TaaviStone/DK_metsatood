@@ -14,13 +14,16 @@ export const CarouselContainer = styled.div`
 
 export const Header = styled.h1`
   color: #fff;
-  font-size: 3rem;
-  text-shadow: 2px 2px #000;
+  font-size: 60px;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.6);
   padding-top: 150px;
   text-align: center;
+  padding-bottom: 30px;
 
   @media screen and (max-width: 770px) {
     padding-top: 100px;
+    padding-bottom: 0px;
+    font-size: 40px;
   }
 `;
 

@@ -54,6 +54,7 @@ export const NavMenu = styled.ul`
 `;
 
 export const NavItem = styled.li`
+  letter-spacing: 1px;
   height: 80px;
 `;
 
