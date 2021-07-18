@@ -39,10 +39,11 @@ export const HeroContent = styled.div`
 
 export const HeroH1 = styled.h1`
   color: #fff;
-  font-size: 4rem;
+  font-size: 60px;
   text-align: center;
   z-index: 2;
   position: relative;
+  text-shadow: 3px 3px #28220b;
 
   @media screen and (max-width: 770px) {
     font-size: 40px;
@@ -66,10 +67,28 @@ export const ButtonContact = styled(LinkS)`
   background-color: #fff;
   font-weight: 550;
   font-size: 20px;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   color: #000;
   cursor: pointer;
-  box-shadow: 0 10px 10px rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
+
+  &:hover {
+    color: #fff !important;
+    background: #decd87;
+    transition: all 0.4s ease 0s;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    background: #28220b;
+  }
+
+  @media screen and (max-width: 770px) {
+    font-size: 16px;
+    padding: 20px 55px;
+  }
 `;
 
 export const ParralaxImg = styled.img`

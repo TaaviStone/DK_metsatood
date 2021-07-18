@@ -6,8 +6,6 @@ import {
   SidebarWrapper,
   SidebarMenu,
   SidebarLink,
-  SideBtnWrap,
-  SidebarRoute,
 } from "./SidebarElements";
 
 const Sidebar = ({ isOpen, toggle }) => {
@@ -18,10 +16,18 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="home">KODU</SidebarLink>
-          <SidebarLink to="about">TEENUSED</SidebarLink>
-          <SidebarLink to="jobs-pics">NÄIDISED</SidebarLink>
-          <SidebarLink to="contact">KONTAKT</SidebarLink>
+          <SidebarLink onClick={toggle} to="home">
+            KODU
+          </SidebarLink>
+          <SidebarLink onClick={toggle} to="about">
+            TEENUSED
+          </SidebarLink>
+          <SidebarLink onClick={toggle} to="jobs-pics">
+            NÄIDISED
+          </SidebarLink>
+          <SidebarLink onClick={toggle} to="contact">
+            KONTAKT
+          </SidebarLink>
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarConatiner>

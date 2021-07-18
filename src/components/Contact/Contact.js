@@ -20,7 +20,7 @@ const Contact = () => {
         <OwnerPhone>(+372) 5341 8200</OwnerPhone>
       </ContactHeadWrap>
       <ContactForm>
-        <ContactHeader>Võta ühendust</ContactHeader>
+        <ContactHeader>Kirjuta meilile</ContactHeader>
 
         <ContactLabel>Nimi</ContactLabel>
         <ContactInput placeholder="Nimi" />

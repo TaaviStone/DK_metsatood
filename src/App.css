@@ -10,4 +10,16 @@ body {
   height: 100%;
   background: #28220b;
 }
-/*28220b*/
+
+h1 {
+  font-family: "Spartan", sans-serif;
+}
+
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: "Bitter", serif;
+  letter-spacing: 3px;
+}

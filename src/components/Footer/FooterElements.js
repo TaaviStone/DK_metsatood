@@ -16,3 +16,9 @@ export const FooterContent = styled.p`
   font-size: 1.3rem;
   color: #fff;
 `;
+
+export const Creator = styled.p`
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+`;

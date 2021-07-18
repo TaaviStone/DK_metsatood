@@ -17,6 +17,10 @@ export const OwnerName = styled.h1`
   font-size: 5rem;
   text-align: center;
   color: #28220b;
+
+  @media screen and (max-width: 770px) {
+    font-size: 50px;
+  }
 `;
 
 export const OwnerPhone = styled.h2`
@@ -24,6 +28,9 @@ export const OwnerPhone = styled.h2`
   text-align: center;
   color: #28220b;
   padding-top: 15px;
+  @media screen and (max-width: 770px) {
+    font-size: 30px;
+  }
 `;
 
 export const ContactForm = styled.form`
@@ -36,9 +43,6 @@ export const ContactForm = styled.form`
   @media screen and (max-width: 770px) {
     width: 80vw;
   }
-
-  @media screen and (max-width: 460px) {
-  }
 `;
 
 export const ContactHeader = styled.h2`
@@ -46,6 +50,10 @@ export const ContactHeader = styled.h2`
   text-align: center;
   font-size: 2.5rem;
   text-decoration: underline;
+
+  @media screen and (max-width: 770px) {
+    font-size: 30px;
+  }
 `;
 
 export const ContactLabel = styled.label`

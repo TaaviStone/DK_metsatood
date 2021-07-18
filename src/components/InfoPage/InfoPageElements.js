@@ -78,12 +78,14 @@ export const OfferTopL = styled.h2`
   border-bottom: 5px solid #decd87;
   padding: 20px 0 20px 0;
   line-height: 1.6;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 `;
 
 export const OfferMiddleL = styled.h2`
   border-bottom: 5px solid #decd87;
   padding: 20px 0 20px 0;
   line-height: 1.6;
+  font-weight: 600;
 `;
 
 export const OfferTopR = styled.h2`
@@ -91,10 +93,13 @@ export const OfferTopR = styled.h2`
   border-bottom: 5px solid #28220b;
   padding: 20px 0 20px 0;
   line-height: 1.6;
+  color: #000;
+  font-weight: 600;
 `;
 
 export const OfferMiddleR = styled.h2`
   border-bottom: 5px solid #28220b;
   padding: 20px 0 20px 0;
   line-height: 1.6;
+  color: #000;
 `;
