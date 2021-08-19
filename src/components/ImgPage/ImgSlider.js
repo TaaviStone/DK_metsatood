@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { SliderData } from "./SliderData";
+import { SliderDataMachines } from "./SliderDataMachines";
 import {
   CarouselContainer,
   CarouselWrapper,
@@ -38,6 +39,25 @@ const ImgSlider = ({ slides }) => {
           <FaArrowLeft onClick={prevSlide} />
           <FaArrowRight onClick={nextSlide} />
           {SliderData.map((slide, index) => {
+            return (
+              <div
+                className={index === current ? <SlideActive /> : <Slide />}
+                key={index}
+              >
+                {index === current && (
+                  <Images src={slide.image} alt="metsatood" />
+                )}
+              </div>
+            );
+          })}
+        </Carousel>
+      </CarouselWrapper>
+      <Header>MASINAPARK</Header>
+      <CarouselWrapper>
+        <Carousel>
+          <FaArrowLeft onClick={prevSlide} />
+          <FaArrowRight onClick={nextSlide} />
+          {SliderDataMachines.map((slide, index) => {
             return (
               <div
                 className={index === current ? <SlideActive /> : <Slide />}

@@ -31,14 +31,13 @@ export const CarouselWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 800px;
+  height: 500px;
   position: relative;
   z-index: 1;
-  margin-top: -100px;
 
   @media screen and (max-width: 770px) {
-    margin-top: -180px;
-    padding-bottom: -100px;
+    margin-top: -100px;
+    margin-bottom: -100px;
   }
 `;
 
