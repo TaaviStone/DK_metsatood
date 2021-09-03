@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import CookieConsent from "react-cookie-consent";
-import ClockLoader from "react-spinners/ClockLoader";
+import BarLoader from "react-spinners/BarLoader";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -18,12 +18,15 @@ function App() {
   return (
     <Router>
       {loading ? (
-        <ClockLoader
-          classname="loader"
-          color={"#DECD87"}
-          loading={loading}
-          size={600}
-        />
+        <div className="App">
+          <BarLoader
+            classname="loader"
+            color={"#DECD87"}
+            loading={loading}
+            height={10}
+            width={200}
+          />
+        </div>
       ) : (
         <>
           <Home />
