@@ -32,10 +32,10 @@ const Contact = () => {
     if (isValid) {
       emailjs
         .sendForm(
-          "service_wv96hbb",
-          "template_d5ubbh8",
+          "service_0l1vevq",
+          "template_a79j1cc",
           e.target,
-          "user_8s1aLYGxIcqiK3Mx4t7G6"
+          "user_WoBjyvGzVBGu1frG8DZlO"
         )
         .then((res) => {
           console.log(res);
@@ -43,7 +43,7 @@ const Contact = () => {
         .catch((err) => console.log(err));
       refreshPage();
     } else {
-      alert("Kontrolli sõnumi saatmise sisendeid");
+      alert("Kontrolli sõnumi saatmise");
     }
   };
 
