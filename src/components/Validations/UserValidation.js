@@ -5,6 +5,6 @@ export const userSchema = yup.object().shape({
   email: yup.string().email().required("Kohustuslik"),
   text: yup
     .string()
-    .max(10, "Teksti pikkus vähemalt 10 tähemärki")
+    .min(10, "Teksti pikkus vähemalt 10 tähemärki")
     .required("Kohustuslik"),
 });
