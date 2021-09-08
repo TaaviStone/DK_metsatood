@@ -8,8 +8,6 @@ import {
   FaArrowLeft,
   FaArrowRight,
   Images,
-  Slide,
-  SlideActive,
   Header,
   BottomImage,
 } from "./ImgSliderElements";

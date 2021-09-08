@@ -11,8 +11,11 @@ import {
   ContactTextarea,
   ContactHeadWrap,
   SubmitButton,
+  ErrorMessage,
 } from "./ContactElements";
-import { userSchema, ErrorMessage } from "../Validations/UserValidation";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
+import { userSchema } from "../Validations/UserValidation";
 
 const Contact = () => {
   const sendEmail = async (e) => {
@@ -22,6 +25,7 @@ const Contact = () => {
       email: e.target[1].value,
       text: e.target[2].value,
     };
+
     const isValid = await userSchema.isValid(formData);
     console.log(isValid);
 
@@ -37,8 +41,33 @@ const Contact = () => {
           console.log(res);
         })
         .catch((err) => console.log(err));
+      refreshPage();
+    } else {
+      alert("Kontrolli sõnumi saatmise sisendeid");
     }
   };
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(userSchema),
+  });
+
+  const submitForm = (data) => {
+    console.log(data);
+  };
+
+  function refreshPage() {
+    alert("Sõnum on saadetud");
+    setTimeout(
+      function () {
+        window.location.reload({ render: true });
+      }.bind(this),
+      1000
+    );
+  }
 
   return (
     <ContactContainer id="contact">
@@ -50,14 +79,24 @@ const Contact = () => {
         <ContactHeader>Kirjuta meilile</ContactHeader>
 
         <ContactLabel>Nimi</ContactLabel>
-        <ContactInput placeholder="Nimi" name="name" />
-
+        <ContactInput type="text" placeholder="Nimi" name="name" />
+        <>{errors.name?.message}</>
         <ContactLabel>Email</ContactLabel>
-        <ContactInput placeholder="nimi@email.com" name="userEmail" />
-
+        <ContactInput
+          type="text"
+          placeholder="nimi@email.com"
+          name="userEmail"
+          ref={register("userEmail")}
+        />
+        {errors.email?.message}
         <ContactLabel>Sõnum</ContactLabel>
-        <ContactTextarea placeholder="Sõnum" name="message"></ContactTextarea>
-
+        <ContactTextarea
+          type="text"
+          placeholder="Sõnum"
+          name="message"
+          ref={React.createRef(register("message"))}
+        ></ContactTextarea>
+        {errors.text?.message}
         <SubmitButton type="submit">SAADA SÕNUM</SubmitButton>
       </ContactForm>
     </ContactContainer>

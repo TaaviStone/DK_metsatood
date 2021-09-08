@@ -101,3 +101,5 @@ export const SubmitButton = styled.button`
   transition: 0.2s ease-in-out;
   margin-top: 10px;
 `;
+
+export const ErrorMessage = styled.p``;
