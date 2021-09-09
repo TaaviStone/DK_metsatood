@@ -11,7 +11,6 @@ import {
   ContactTextarea,
   ContactHeadWrap,
   SubmitButton,
-  ErrorMessage,
 } from "./ContactElements";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
@@ -43,7 +42,7 @@ const Contact = () => {
         .catch((err) => console.log(err));
       refreshPage();
     } else {
-      alert("Kontrolli sõnumi saatmise");
+      alert("Kontrolli sõnumi saatmise sisendvälju");
     }
   };
 
